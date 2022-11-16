@@ -9,46 +9,45 @@
     <link rel="icon" href="assets/CSS/image/icon.svg" />
 </head>
 <body>
+    
+    <!-- TITULO -->
+    <h1 class="title" style="--duration: 1s">
+        <span style="--delay: .5s">Volpi</span>
+        <span style="--delay: .8s">Tattoo</span>
+    </h1>
 
-    <div class="container">
-        <div class="navigation">
-            <div class="menu-toggle">
-                <ul class="list">
-                    <li class="list-item active" style="--color:#f44336"><a href="#">
-                        <span class="icon">
-                            <ion-icon name="home-outline"></ion-icon>
-                        </span>
-                        <span class="text">Home</span>
-                    </a>
-                    </li>
-                    <li class="list-item" style="--color:#ffa117"><a href="#">
-                        <span class="icon">
-                            <ion-icon name="alert-outline"></ion-icon>
-                        </span>
-                        <span class="text">Sobre</span>
-                    </a>
-                    </li>
-                    <li class="list-item" style="--color:#0fc70f"><a href="#">
-                        <span class="icon">
-                            <ion-icon name="call-outline"></ion-icon>
-                        </span>
-                        <span class="text">Contato</span>
-                    </a>
-                    </li>
-                    <li class="list-item" style="--color:#2196f3"><a href="#">
-                        <span class="icon">
-                            <ion-icon name="grid-outline"></ion-icon>
-                        </span>
-                        <span class="text">Portfolio</span>
-                    </a>
 
-                    </li>
-                </ul>
-            </div>
+    <!-- Navegação -->
+    <nav class="active" id="nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Trabalhos</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+        <button class="icon" id="toggle">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+        </button>
+      </nav>
+      <script src="script.js"></script>
+
+    <!-- Sobre -->
+    <div class="about" id="about">
+        <div>
+            <span>
+                <h1>Sobre min</h1>
+            </span>
+        </div>
+
+        <div class="desc__about">
+            <span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est excepturi velit, sit nemo optio sunt iure mollitia molestias odit dolore dolorem assumenda ab ratione eum ad, aliquid maxime alias voluptatum!</p>
+            </span>
         </div>
     </div>
     
-    
+
     <script src="assets/JS/script.js"></script>
 </body>
 </html>
