@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Volpi - Tattoo</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
     <link rel="stylesheet" href="assets/CSS/style.css">
     <link rel="icon" href="assets/CSS/image/icon.svg" />
+    
 </head>
 <body>
     
@@ -18,19 +21,29 @@
 
 
     <!-- Navegação -->
-    <nav class="active" id="nav">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#">Sobre</a></li>
-          <li><a href="#">Trabalhos</a></li>
-          <li><a href="#">Contato</a></li>
-        </ul>
-        <button class="icon" id="toggle">
-          <div class="line line1"></div>
-          <div class="line line2"></div>
-        </button>
-      </nav>
-      <script src="script.js"></script>
+
+    <div class="button_container" id="toggle">
+        <span class="top"></span>
+        <span class="middle"></span>
+        <span class="bottom"></span>
+    </div>
+
+    <div class="overlay" id="overlay">
+        <nav class="overlay-menu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#work">Trabalhos</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- BACKGROUND -->
+    <div class="background">
+        <span class="background-img"></span>
+    </div>
+
 
     <!-- Sobre -->
     <div class="about" id="about">
@@ -42,12 +55,17 @@
 
         <div class="desc__about">
             <span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est excepturi velit, sit nemo optio sunt iure mollitia molestias odit dolore dolorem assumenda ab ratione eum ad, aliquid maxime alias voluptatum!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est excepturi velit, sit nemo optio sunt iure mollitia molestias odit dolore dolorem assumenda ab ratione eum ad, aliquid maxime alias voluptatum!
+                </p>
             </span>
         </div>
     </div>
-    
 
-    <script src="assets/JS/script.js"></script>
+
+    <!-- Trabalhos -->
+    
+    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js'></script><script  src="assets/script/script.js"></script>
 </body>
 </html>

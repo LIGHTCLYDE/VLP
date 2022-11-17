@@ -9,7 +9,25 @@
 
 body {
     background: url(image/background.gif);
+    background-repeat: no-repeat;
     background-size: cover;
+
+}
+
+/* Estilo Scrollbar */
+
+body::-webkit-scrollbar {
+  width: 13px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(179, 179, 179);
+  border-radius: 20px;
+  border: 3px solid rgb(255, 255, 255);
 }
 
 
@@ -77,104 +95,165 @@ body {
     }
 }
 
-@media screen { min-height: 667px;
-    .body {
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-}
-
 
 /*NAVEGAÇÃO*/
 
-nav {   
-  background-color: #fff;
-  padding: 20px;
-  width: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  transition: width 0.6s linear;
-  overflow-x: hidden;
+.button_container {
+  position: fixed;
+  top: 5%;
+  right: 2%;
+  height: 27px;
+  width: 35px;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity 0.25s ease;
 }
 
-nav.active {
-  width: 390px;
+.button_container:hover {
+  opacity: 0.7;
 }
 
-nav ul {
-  display: flex;
-  list-style-type: none;
+.button_container.active .top {
+  transform: translateY(11px) translateX(0) rotate(45deg);
+  background: #FFF;
+}
+
+.button_container.active .middle {
+  opacity: 0;
+  background: #FFF;
+}
+
+.button_container.active .bottom {
+  transform: translateY(-11px) translateX(0) rotate(-45deg);
+  background: #FFF;
+}
+
+.button_container span {
+  background: #ffffff;
+  border: none;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+.button_container span:nth-of-type(2) {
+  top: 11px;
+}
+
+.button_container span:nth-of-type(3) {
+  top: 22px;
+}
+
+.overlay {
+  position: fixed;
+  background: #AF0404;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s, visibility 0.35s, height 0.35s;
+  overflow: hidden;
+}
+
+.overlay.open {
+  opacity: 0.9;
+  visibility: visible;
+  height: 100%;
+}
+
+.overlay.open li {
+  animation: fadeInRight 0.5s ease forwards;
+  animation-delay: 0.35s;
+}
+
+.overlay.open li:nth-of-type(2) {
+  animation-delay: 0.4s;
+}
+
+.overlay.open li:nth-of-type(3) {
+  animation-delay: 0.45s;
+}
+
+.overlay.open li:nth-of-type(4) {
+  animation-delay: 0.5s;
+}
+
+.overlay nav {
+  position: relative;
+  height: 70%;
+  top: 40%;
+  transform: translateY(-50%);
+  font-size: 35px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.overlay ul {
+  list-style: none;
   padding: 0;
-  margin: 0;
-  width: 0;
-  transition: width 0.6s linear;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  height: 100%;
 }
 
-nav.active ul {
+.overlay ul li {
+  display: block;
+  height: 20%;
+  height: calc(100% / 5);
+  min-height: 40px;
+  position: relative;
+  opacity: 0;
+}
+
+.overlay ul li a {
+  display: block;
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
   width: 100%;
 }
 
-nav ul li {
-  transform: rotateY(0deg);
-  opacity: 0;
-  transition: transform 0.6s linear, opacity 0.6s linear;
-}
-
-nav.active ul li {
-  opacity: 1;
-  transform: rotateY(360deg);
-}
-
-nav ul a {
-  position: relative;
-  color: #000;
-  text-decoration: none;
-  margin: 0 10px;
-}
-
-.icon {
-  background-color: #fff;
-  border: 0;
-  cursor: pointer;
-  padding: 0;
-  position: relative;
-  height: 30px;
-  width: 30px;
-}
-
-.icon:focus {
-  outline: 0;
-}
-
-.icon .line {
-  background-color:#000;
-  height: 2px;
-  width: 20px;
+.overlay ul li a:after {
+  content: "";
   position: absolute;
-  top: 10px;
-  left: 5px;
-  transition: transform 0.5s linear;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  transform: translateX(-50%);
+  height: 3px;
+  background: #FFF;
+  transition: 0.35s;
 }
-
-.icon .line2 {
-  top: auto;
-  bottom: 10px;
-}
-
-nav.active .icon .line1 {
-  transform: rotate(-765deg) translateY(5.5px);
-}
-
-nav.active .icon .line2 {
-  transform: rotate(765deg) translateY(-5.5px);
-}
-
-
 
 .about {
-    color: #fff;
-    background: #AF0404;
+  color: #fff;
+  background: #131313;
+  width: 1200px;
+  height: 350px;
+  padding: auto;
+  text-align: center;
+  margin: auto;
+  margin-top: 190px;
+  border-radius: 12px;
+  border: 3px solid #fff;
+}
+
+.about h1 {
+  padding: 20px;
+  font-size: 55px;
+}
+
+.about p {
+  padding: 5px;
 }
