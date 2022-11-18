@@ -8,10 +8,10 @@
 }
 
 body {
-    background: url(image/background.gif);
+    background-image: url(image/background.gif);
     background-repeat: no-repeat;
     background-size: cover;
-
+    background-attachment: fixed;
 }
 
 /* Estilo Scrollbar */
@@ -255,5 +255,17 @@ body::-webkit-scrollbar-thumb {
 }
 
 .about p {
-  padding: 5px;
+  padding: 10px;
+}
+
+
+/*TRABALHOS*/
+
+.slider {
+  display: block;
+  height: 290px;
+  width: 600px;
+  margin: auto;
+  margin-top: 20px;
+  position: relative;
 }
