@@ -260,152 +260,115 @@ body::-webkit-scrollbar-thumb {
 
 
 /*TRABALHOS*/
+.title__works h1 {
+  width: 1080px;
+  height: 100px;
+  padding: auto;
+  margin: auto;
+  text-align: center;
+  margin-top: 100px;
+  font-size: 60px;
+  color: #fff;
+  background: #131313;
+  padding: 18px;
+  border-radius: 12px;
+  border: 3px solid #fff;
+}
 
 .container {
-  width: 95vw;
-  height: 80vh;
-  justify-content: center;
-  align-items: center;
-}
-
-.slider {
-  height: 1050px;
-  width: 100vw;
+  position: relative;
+  width: 1160px;
   display: flex;
-  perspective: 1000px;
-  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  margin: auto;
 }
-
-.box1 {
-  background: url(image/image_tattoo/box1.jpg);
-  background-size: cover;
-  background-position: center center;
-}
-
-.box2 {
-  background: url(image/image_tattoo/box2.jpg);
-  background-size: cover;
-  background-position: center center;
-}
-
-.box3 {
-  background: url(image/image_tattoo/box3.jpg);
-  background-size: cover;
-  background-position: center center;
-}
-
-.box4 {
-  background: url(image/image_tattoo/box4.jpg);
-  background-size: cover;
-  background-position: center center;
-}
-
-.box5 {
-  background: url(image/image_tattoo/box5.jpg);
-  background-size: cover;
-  background-position: center center;
-}
-
-.box6 {
-  background: url(image/image_tattoo/box6.jpg);
-  background-size: cover;
-  background-position: center center;
-}
-
-.box7 {
-  background: url(image/image_tattoo/box7.jpg);
-  background-size: cover;
-  background-position: center center;
-}
-
-.slider [class*="box"] {
+.container .box {
+  position: relative;
+  width: 275px;
+  height: 275px;
+  background: #000;
+  transition: 0.5s;
+  transform-style: preserve-3d;
   overflow: hidden;
-  border-radius: 20px;
-  transition: all 1s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  margin-right: 15px;
+  margin-top: 45px;
 }
-
-.slider [class*="box"]:nth-child(7),
-.slider [class*="box"]:nth-child(1) {
-  width: 100vh;
-  height: 60vh;
-  transform: scale(0.2) translate(-50%, -50%);
-  top: 10%;
+.container:hover .box {
+  transform: rotateY(25deg);
+}
+.container .box:hover ~ .box {
+  transform: rotateY(-25deg);
+}
+.container .box:hover {
+  transform: rotateY(0deg) scale(1.25);
   z-index: 1;
+  box-shadow: 0 25px 40px rgba(0,0,0,0.5);
 }
-
-.slider [class*="box"]:nth-child(2),
-.slider [class*="box"]:nth-child(6) {
-  width: 100vh;
-  height: 60vh;
-  transform: scale(0.4) translate(-50%, -50%);
-  top: 20%;
-  z-index: 2;
+.container .box .imgBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
-
-.slider [class*="box"]:nth-child(3),
-.slider [class*="box"]:nth-child(5) {
-  width: 100vh;
-  height: 60vh;
-  transform: scale(0.6) translate(-50%, -50%);
-  top: 30%;
-  z-index: 3;
+.container .box .imgBx:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg,#f00,#000);
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s;
+  mix-blend-mode: multiply;
 }
-
-.slider [class*="box"]:nth-child(4) {
-  width: 35vw;
-  height: 60vh;
-  border-color: #c92026;
+.container .box:hover .imgBx:before {
+  opacity: 1;
+}
+.container .box .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container .box .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  padding: 20px;
+  align-items: flex-end;
+  box-sizing: border-box;
+}
+.container .box .content h2 {
   color: #fff;
-  transform: scale(1) translate(-50%, -50%);
-  top: 50%;
-  z-index: 4;
+  transition: 0.5s;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: 20px;
+  transform: translateY(200px);
+  transition-delay: 0.3s;
 }
-
-.slider [class*="box"]:nth-child(1) {
-  left: -13%;
+.container .box:hover .content h2 {
+  transform: translateY(0px);
 }
-
-.slider [class*="box"]:nth-child(2) {
-  left: -5%;
+.container .box .content p {
+  color: #fff;
+  transition: 0.5s;
+  font-size: 14px;
+  transform: translateY(200px);
+  transition-delay: 0.4s;
 }
-
-.slider [class*="box"]:nth-child(3) {
-  left: 10%;
-}
-
-.slider [class*="box"]:nth-child(4) {
-  left: 50%;
-}
-
-.slider [class*="box"]:nth-child(5) {
-  left: 71%;
-}
-
-.slider [class*="box"]:nth-child(6) {
-  left: 85%;
-}
-
-.slider [class*="box"]:nth-child(7) {
-  left: -100%;
-}
-
-.slider .firstSlide {
-  -webkit-animation: firstChild 1s;
-  animation: firstChild 1s;
-}
-
-@-webkit-keyframes firstChild {
-  0% {left: 100%; transform: scale(0.2)
-    translate(-50%, -50%);}
-
-  100% {left: -13%; transform: scale(0.2)
-    translate(-50%, -50%);}
-}
-
-@keyframes firstChild {
-  0% {left: 100%; transform: scale(0.2)
-    translate(-50%, -50%);}
-
-  100% {left: -13%; transform: scale(0.2)
-    translate(-50%, -50%);}
+.container .box:hover .content p {
+  transform: translateY(0px);
 }
