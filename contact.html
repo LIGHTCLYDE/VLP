@@ -16,25 +16,23 @@
         integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
         crossorigin="anonymous" />
 </head>
-
-<body>
-
-    <div class="form">
-        <form action="submit">
-            <span>Nome: </span>
-            <input type="text" name="name" id="name">
-
-            <span>Numero: </span>
-            <input type="number" name="number" id="number">
-
-            <span>Imagem referencia de sua arte: </span>
-            <input type="file" name="file" id="file">
+    <div class="container">
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <h3>Entrar em contato</h3>
+            <input type="text" id="name" placeholder="Seu nome" required>
+            <input type="email" id="email" placeholder="Seu e-mail" required>
+            <input type="text" id="phone" placeholder="Seu telefone" required>
+            <textarea name="" id="message" rows="4" placeholder="Descreva sua idéia"></textarea>
+            <input type="file" name="file" placeholder="Envie sua imagem da ideia e da área que deseja a Tattoo">
+            <button type="submit">Enviar</button>
         </form>
     </div>
 
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src='//cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js'></script>
+    <script src="assets/script/contact.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="assets/script/script-main.js"></script>
 </body>
 

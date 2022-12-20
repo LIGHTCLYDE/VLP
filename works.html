@@ -37,19 +37,24 @@
                 <li><a href="contact.html">Contato</a></li>
             </ul>
         </nav>
-    </div>>
-
-
-    <div class="img-gallery">
-        <img src="assets/CSS/image/image_tattoo/Tattoo_luis_felipe_1.jpeg">
-        <img src="assets/CSS/image/image_tattoo/Tattoo_yasmin_1.jpeg">
-        <img src="assets/CSS/image/image_tattoo/Tattoo_Yasmin_2.jpeg">
-        <img src="assets/CSS/image/image_tattoo/Tattoo_luis_felipe_2.jpeg">
-        <img src="assets/CSS/image/image_tattoo/Tattoo_kennedy.jpeg">
-        <img src="assets/CSS/image/image_tattoo/Tattoo_sino.jpeg">
     </div>
 
-    
+
+    <div class="full-img" id="fullImgBox">
+        <img src="assets/CSS/image/image_tattoo/Tattoo_luis_felipe_1.jpeg" id="fullImg">
+        <span onclick="closeFullImg()">X</span>
+    </div>
+
+    <div class="img-gallery">
+        <img src="assets/CSS/image/image_tattoo/Tattoo_luis_felipe_1.jpeg" onclick="openFullImg(this.src)">
+        <img src="assets/CSS/image/image_tattoo/Tattoo_yasmin_1.jpeg" onclick="openFullImg(this.src)">
+        <img src="assets/CSS/image/image_tattoo/Tattoo_Yasmin_2.jpeg" onclick="openFullImg(this.src)">
+        <img src="assets/CSS/image/image_tattoo/Tattoo_luis_felipe_2.jpeg" onclick="openFullImg(this.src)">
+        <img src="assets/CSS/image/image_tattoo/Tattoo_kennedy.jpeg" onclick="openFullImg(this.src)">
+        <img src="assets/CSS/image/image_tattoo/Tattoo_sino.jpeg" onclick="openFullImg(this.src)">
+    </div>
+
+
 
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
