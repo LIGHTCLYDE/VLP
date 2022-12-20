@@ -44,3 +44,9 @@ form button {
     cursor: pointer;
     border-radius: 10px;
 }
+
+
+.social-icons {
+    position: relative;
+    justify-content: center;
+}
