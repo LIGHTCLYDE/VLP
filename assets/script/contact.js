@@ -1,8 +1,6 @@
 function sendEmail() {
     Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "volpitattoo@gmail.com",
-        Password : "Volpi010203",
+        SecureToken : "716b0632-bae7-49e5-97bd-d2cdc5d4e862",
         To : 'volpitattoo@gmail.com',
         From : document.getElementById("email").value,
         Subject : "Novo E-mail de contato recebido ",
@@ -10,8 +8,8 @@ function sendEmail() {
             + "<br> Email: " + document.getElementById("email").value
             + "<br> Telefone: " + document.getElementById("phone").value
             + "<br> Mensagem: " + document.getElementById("message").value
-            + "<br> Arquivo PNG: " + document.getElementById("file").value
+            
     }).then(
-      message => alert("Mensagem Enviada Com Sucesso")
+      message => alert("E-mail Enviado Com Sucesso")
     );
 }
