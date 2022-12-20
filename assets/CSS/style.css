@@ -361,8 +361,8 @@ body::-webkit-scrollbar-thumb {
 .about {
   color: #fff;
   background: #131313;
-  width: 1200px;
-  height: 430px;
+  max-width: 1200px;
+  max-height: auto;
   padding: auto;
   text-align: center;
   margin: auto;
