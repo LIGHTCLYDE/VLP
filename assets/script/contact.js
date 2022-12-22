@@ -1,10 +1,7 @@
 function sendEmail() {
     Email.send({
-        
-        Host : "smtp.elasticemail.com",
-        Username : "volpitattoo@gmail.com",
-        Password : "vbhzduqegsrhutpz",
-        To : 'volpitattoo@gmail.com',
+        SecureToken : 'ee2b918a-0756-4843-a48d-90c3fd001921',
+        To : 'volpitattoo@outlook.com',
         From : document.getElementById("email").value,
         Subject : "Novo E-mail de contato recebido",
         Body : "Name: " + document.getElementById("name").value
